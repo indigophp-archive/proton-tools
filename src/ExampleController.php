@@ -21,8 +21,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class ExampleController
 {
-    use AppAware;
-
     /**
      * Index action displaying the main site
      *

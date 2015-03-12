@@ -18,19 +18,26 @@ use Proton\Application;
  *
  * @author Márk Sági-Kazár <mark.sagikazar@gmail.com>
  */
-interface AppAware
+trait AppAcceptor
 {
     /**
-     * Returns the current application
-     *
-     * @return Application
+     * @var Application
      */
-    public function getApp();
+    protected $app;
 
     /**
-     * Sets the current application
-     *
-     * @param Application $app
+     * {@inheritdoc}
      */
-    public function setApp(Application $app);
+    public function getApp()
+    {
+        return $this->app;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setApp(Application $app)
+    {
+        $this->app = $app;
+    }
 }

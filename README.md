@@ -19,6 +19,13 @@ $ composer require indigophp/proton-tools
 
 ## Usage
 
+In order to inject application into objects, add this to the conttainer:
+
+``` php
+$container->inflector('Proton\Tools\AppAware')
+	->invokeMethod('setApp', ['app']);
+```
+
 
 ## Contributing
 
