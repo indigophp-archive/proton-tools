@@ -14,6 +14,7 @@ namespace Proton\Tools;
 use Indigo\Guardian\Service\Login;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Use this controller as an example in newly created applications
