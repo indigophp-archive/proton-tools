@@ -14,6 +14,12 @@
         "php": ">=5.4",
         "alexbilbie/proton": "~1.0"
     },
+    "require-dev": {
+        "indigophp/guardian": "dev-master"
+    },
+    "suggest": {
+        "indigophp/guardian": "Used for auth controller"
+    },
     "autoload": {
         "psr-4": {
             "Proton\\Tools\\": "src/"
