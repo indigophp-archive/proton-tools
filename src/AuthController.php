@@ -20,7 +20,7 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * @author Márk Sági-Kazár <mark.sagikazar@gmail.com>
  */
-class AuthController
+abstract class AuthController
 {
     /**
      * @var Login
