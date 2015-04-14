@@ -24,6 +24,8 @@ interface AppAware
      * Returns the current application
      *
      * @return Application
+     *
+     * @throws \RuntimeException if application has not been set previously
      */
     public function getApp();
 

@@ -14,8 +14,6 @@ namespace Proton\Tools;
 use Proton\Application;
 
 /**
- * Accepts an application
- *
  * @author Márk Sági-Kazár <mark.sagikazar@gmail.com>
  */
 trait AppAcceptor
@@ -30,6 +28,10 @@ trait AppAcceptor
      */
     public function getApp()
     {
+        if (!isset($this->app)) {
+            throw new \RuntimeException('Application has not been set');
+        }
+
         return $this->app;
     }
 
