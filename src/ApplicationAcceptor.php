@@ -16,7 +16,7 @@ use Proton\Application;
 /**
  * @author Márk Sági-Kazár <mark.sagikazar@gmail.com>
  */
-trait AppAcceptor
+trait ApplicationAcceptor
 {
     /**
      * @var Application
@@ -26,7 +26,7 @@ trait AppAcceptor
     /**
      * {@inheritdoc}
      */
-    public function getApp()
+    public function getApplication()
     {
         if (!isset($this->app)) {
             throw new \RuntimeException('Application has not been set');
@@ -38,7 +38,7 @@ trait AppAcceptor
     /**
      * {@inheritdoc}
      */
-    public function setApp(Application $app)
+    public function setApplication(Application $app)
     {
         $this->app = $app;
     }

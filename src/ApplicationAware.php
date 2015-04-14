@@ -14,11 +14,9 @@ namespace Proton\Tools;
 use Proton\Application;
 
 /**
- * Accepts an application
- *
  * @author Márk Sági-Kazár <mark.sagikazar@gmail.com>
  */
-interface AppAware
+interface ApplicationAware
 {
     /**
      * Returns the current application
@@ -27,12 +25,12 @@ interface AppAware
      *
      * @throws \RuntimeException if application has not been set previously
      */
-    public function getApp();
+    public function getApplication();
 
     /**
      * Sets the current application
      *
      * @param Application $app
      */
-    public function setApp(Application $app);
+    public function setApplication(Application $app);
 }
