@@ -11,7 +11,7 @@
 
 namespace Proton\Tools;
 
-use Indigo\Guardian\Service\Login;
+use Indigo\Guardian\SessionAuth;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -24,16 +24,16 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 abstract class AuthController
 {
     /**
-     * @var Login
+     * @var SessionAuth
      */
-    protected $loginService;
+    protected $sessionAuth;
 
     /**
-     * @param Login  $loginService
+     * @param SessionAuth $sessionAuth
      */
-    public function __construct(Login $loginService)
+    public function __construct(SessionAuth $sessionAuth)
     {
-        $this->loginService = $loginService;
+        $this->sessionAuth = $sessionAuth;
     }
 
     /**
@@ -63,7 +63,7 @@ abstract class AuthController
             'password' => $request->request->get('password'),
         ];
 
-        $this->loginService->login($subject);
+        $this->sessionAuth->login($subject);
 
         $returnUri = $request->query->get('uri', $request->attributes->get('stack.url_map.prefix', '/'));
 
